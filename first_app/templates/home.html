@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="container">Home Page</h1>
+
+  <div class="form-container container">
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <h6>{{ name }}</h6>
+      <h6>{{ comment }}</h6>
+      <h6>{{ email }}</h6>
+      <h6>{{ agree }}</h6>
+      <h6>{{ date }}</h6>
+      <h6>{{ birthday }}</h6>
+      <h6>{{ birth_year }}</h6>
+      <h6>{{ decimalValue }}</h6>
+      <h6>{{ favorite_color2 }}</h6>
+      <h6>{{ favorite_colors4 }}</h6>
+      <button type="submit">Submit</button>
+  </form>
+  </div>
+{% endblock %}
